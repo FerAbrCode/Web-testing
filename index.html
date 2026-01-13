@@ -13,22 +13,72 @@
 
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
 
     <main>
-      <h2>Home</h2>
-      <p>
-        This is a simple three-page starter site that uses a single shared
-        stylesheet.
-      </p>
-      <p>
-        The CSS rules are written to style the semantic tags: body, header, nav,
-        main, footer, li, h1, and p.
-      </p>
+      <div class="content-block">
+        <h2>Home</h2>
+
+        <figure class="page-hero">
+          <img
+            src="images/home.svg"
+            alt="Abstract banner representing breaking news updates"
+          />
+        </figure>
+
+        <p>
+          This is a simple three-page starter site that uses a single shared
+          stylesheet.
+        </p>
+        <p>
+          The CSS rules are written to style the semantic tags: body, header,
+          nav, main, footer, li, h1, and p.
+        </p>
+
+        <section class="callout" aria-labelledby="breaking-news">
+          <h3 id="breaking-news">Latest breaking news</h3>
+          <p>
+            Headline: <strong>[Replace with today’s headline]</strong>
+          </p>
+          <p>
+            Summary: [Add 2–3 sentences summarizing what happened, who is
+            affected, and what the next key date/decision point is.]
+          </p>
+          <p>
+            <strong>Implications for Polymarket</strong>
+          </p>
+          <ul class="list">
+            <li>
+              Market framing: identify the exact resolution criteria (what
+              counts as “Yes”/“No”).
+            </li>
+            <li>
+              Timing risk: note deadlines (announcement time, court date,
+              election day, CPI release, etc.).
+            </li>
+            <li>
+              Information flow: watch official sources (press releases,
+              filings, verified statements) over social rumors.
+            </li>
+            <li>
+              Liquidity/spread: expect wider spreads during uncertainty and
+              tighter spreads after confirmations.
+            </li>
+          </ul>
+          <p>
+            <strong>Specific bets/markets to consider (examples)</strong>
+          </p>
+          <ul class="list">
+            <li>Will <em>[event]</em> happen by <em>[date]</em>?</li>
+            <li>Will <em>[agency/person]</em> announce <em>[action]</em> by <em>[date]</em>?</li>
+            <li>What will <em>[numeric outcome]</em> be (range market)?</li>
+          </ul>
+        </section>
+      </div>
     </main>
 
     <footer>
