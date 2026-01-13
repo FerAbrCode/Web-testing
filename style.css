@@ -3,6 +3,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
+  margin: 0;
 }
 
 header {
@@ -51,4 +52,46 @@ nav a {
   color: #0b3d91;
   text-decoration: none;
   font-weight: 600;
+  display: inline-block;
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+
+nav a:hover {
+  background-color: #d6e2fb;
+}
+
+nav a[aria-current="page"] {
+  background-color: #0b3d91;
+  color: #ffffff;
+}
+
+.page-hero {
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+.page-hero img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 14px;
+  display: block;
+}
+
+.content-block {
+  max-width: 900px;
+}
+
+.callout {
+  border-left: 6px solid #0b3d91;
+  background: #f4f7ff;
+  padding: 12px 14px;
+  border-radius: 10px;
+  margin: 14px 0;
+}
+
+.list {
+  margin: 10px 0 0;
+  padding-left: 20px;
 }

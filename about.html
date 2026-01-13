@@ -14,20 +14,64 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
 
     <main>
-      <h2>About</h2>
-      <p>
-        This page exists to confirm the shared stylesheet applies across multiple
-        pages.
-      </p>
-      <p>
-        Update the content as needed for your class project.
-      </p>
+      <div class="content-block">
+        <h2>About</h2>
+
+        <figure class="page-hero">
+          <img
+            src="images/about.svg"
+            alt="Abstract banner representing analysis and reasoning"
+          />
+        </figure>
+
+        <p>
+          This page explains how to think about breaking news in prediction
+          markets (like Polymarket) and how to turn a headline into a clear,
+          testable market question.
+        </p>
+
+        <section class="callout" aria-labelledby="about-implications">
+          <h3 id="about-implications">Implications for Polymarket (general)</h3>
+          <p>
+            Breaking news typically moves markets because it changes the
+            probability of an outcome, not because it is “good” or “bad.” The
+            strongest price moves usually happen when news is both
+            <strong>credible</strong> (verifiable) and <strong>surprising</strong>
+            (meaningfully different from what traders expected).
+          </p>
+          <p>
+            A good reasoning process:
+          </p>
+          <ul class="list">
+            <li>
+              Start with the resolution rule: what exactly must happen for the
+              market to resolve “Yes”?
+            </li>
+            <li>
+              Identify the causal chain: which facts in the story actually make
+              “Yes” more likely (and which are just commentary)?
+            </li>
+            <li>
+              Separate signal from noise: prefer official documents and
+              timestamped announcements.
+            </li>
+            <li>
+              Track base rates and alternatives: ask “what usually happens in
+              similar situations?” and “what else could still happen?”
+            </li>
+            <li>
+              Re-check incentives and timing: upcoming events can add volatility
+              even if the long-run probability is unchanged.
+            </li>
+          </ul>
+        </section>
+      </div>
     </main>
 
     <footer>
