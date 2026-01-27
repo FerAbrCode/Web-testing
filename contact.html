@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Project Starter - Contact</title>
+    <title>Photo Gallery - Contact</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to Main Content</a>
     <header>
-      <h1>Project Starter</h1>
+      <h1>Photo Gallery</h1>
     </header>
     <nav>
       <ul>
@@ -20,30 +20,57 @@
     </nav>
     <main id="main-content">
       <div class="content-block">
-        <h2>Contact</h2>
+        <h2>Contact &amp; Image Showcase</h2>
         <figure class="page-hero">
-          <img src="images/contact.svg" alt="Abstract banner representing sources and references" />
+          <img src="https://picsum.photos/id/1023/900/400" alt="Two golden retrievers on a beach" />
+          <figcaption>Beach companions</figcaption>
         </figure>
         <p>
-          Use this page to keep your news sources in one place.
+          This page showcases our flex layout gallery. Below you'll find six beautiful images
+          displayed using CSS Flexbox. Notice how every other image has a different border style
+          thanks to the nth-child selector!
         </p>
-        <section class="callout" aria-labelledby="sources">
-          <h3 id="sources">News sources (for verification)</h3>
+
+        <section class="callout" aria-labelledby="contact-info">
+          <h3 id="contact-info">Get in Touch</h3>
           <p>
-            Specific sources used for the Jan 13, 2026 item on the Home page:
+            Have questions about our photography? Want to collaborate?
+            Reach out to us at <strong>hello@photogallery.example</strong>
           </p>
-          <ul class="list">
-            <li><a href="https://en.wikipedia.org/wiki/Portal:Current_events/2026_January_13" target="_blank" rel="noopener noreferrer">Wikipedia: Portal:Current events/2026 January 13</a></li>
-            <li><a href="https://t.me/suspilnenews/61235" target="_blank" rel="noopener noreferrer">Suspilne News (Telegram post)</a></li>
-            <li><a href="https://en.wikipedia.org/wiki/Vasyl_Malyuk" target="_blank" rel="noopener noreferrer">Background: Vasyl Malyuk (Wikipedia)</a></li>
-          </ul>
-          <p>
-            Additional reputable outlets (useful for cross-checking):
-          </p>
-          <ul class="list">
-          </ul>
         </section>
+
+        <!-- Flex Layout Section with 6 images (5+ required) -->
+        <h3>Image Showcase (Flex Layout)</h3>
+        <div class="flex-gallery">
+          <figure class="flex-item">
+            <img src="https://picsum.photos/id/1024/300/200" alt="Vintage Volkswagen van on desert road" />
+            <figcaption>Road Trip</figcaption>
+          </figure>
+          <figure class="flex-item">
+            <img src="https://picsum.photos/id/1025/300/200" alt="Small pug dog looking at camera" />
+            <figcaption>Curious Pug</figcaption>
+          </figure>
+          <figure class="flex-item">
+            <img src="https://picsum.photos/id/1026/300/200" alt="Person on a pier looking at the water" />
+            <figcaption>Peaceful Pier</figcaption>
+          </figure>
+          <figure class="flex-item">
+            <img src="https://picsum.photos/id/1027/300/200" alt="Flamingo standing in water" />
+            <figcaption>Pink Flamingo</figcaption>
+          </figure>
+          <figure class="flex-item">
+            <img src="https://picsum.photos/id/1028/300/200" alt="Snowy cabin in winter forest" />
+            <figcaption>Winter Cabin</figcaption>
+          </figure>
+          <figure class="flex-item">
+            <img src="https://picsum.photos/id/1029/300/200" alt="Close up of green leaves with water droplets" />
+            <figcaption>Morning Dew</figcaption>
+          </figure>
+        </div>
       </div>
     </main>
+    <footer>
+      <p>&copy; 2026 Photo Gallery. All rights reserved.</p>
+    </footer>
   </body>
 </html>

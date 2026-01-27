@@ -1,70 +1,125 @@
-/* Single shared stylesheet for all pages */
+/* ============================================
+   Photo Gallery - Complete Stylesheet
+   Demonstrates: Grid, Flex, position, focus,
+   hover, nth-child, and box model styling
+   ============================================ */
+
+/* ---- Base Styles ---- */
+* {
+  box-sizing: border-box;
+}
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
   font-size: 18px;
   margin: 0;
-}
-
-header {
-  background-color: #0b3d91;
-}
-
-nav {
-  background-color: #e8eef9;
-  display: inline-block;
-  width: 80%;
-}
-
-nav img {
-  width: 10%;
-}
-
-main {
-  background-color: #ffffff;
-  font-size: 1rem;
-  padding: 16px;
-}
-
-footer {
-  background-color: #0b3d91;
-  color: #ffffff;
-  padding: 12px 16px;
-}
-
-/* li {
-  display: inline-block;
-  width: 30%;
-} */
-
-h1 {
-  text-align: center;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: #ffffff;
-}
-
-p {
+  background-color: #f0f4f8;
+  color: #333;
   line-height: 1.6;
 }
 
-/* Small optional niceties (not required, but helps readability) */
+/* ---- Skip to Main Content Link ----
+   Uses position: absolute to hide off-screen
+   Becomes visible when focused (focus pseudo-class) */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #0b3d91;
+  color: #ffffff;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 0 0 8px 8px;
+  z-index: 1000;
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 3px solid #ffc107;
+  outline-offset: 2px;
+}
+
+/* ---- Header ---- */
+header {
+  background: linear-gradient(135deg, #0b3d91 0%, #1a5fc9 100%);
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #ffffff;
+  margin: 0;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ---- Navigation ----
+   Uses Flexbox for layout
+   Styled with 3+ CSS properties:
+   1. background (gradient)
+   2. box-shadow
+   3. border-radius (on links)
+   4. padding
+   5. gap */
+nav {
+  background: linear-gradient(to right, #e8eef9, #d6e2fb);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
 nav ul {
   list-style: none;
   margin: 0;
-  padding: 10px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+nav li {
+  margin: 0;
 }
 
 nav a {
   color: #0b3d91;
   text-decoration: none;
   font-weight: 600;
-  display: inline-block;
-  padding: 10px 12px;
-  border-radius: 10px;
+  display: block;
+  padding: 15px 25px;
+  border-radius: 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Navigation hover effect with underline animation */
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: #0b3d91;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+nav a:hover::after {
+  width: 80%;
 }
 
 nav a:hover {
-  background-color: #d6e2fb;
+  color: #1a5fc9;
+  background-color: rgba(11, 61, 145, 0.05);
 }
 
 nav a[aria-current="page"] {
@@ -72,8 +127,50 @@ nav a[aria-current="page"] {
   color: #ffffff;
 }
 
+nav a[aria-current="page"]::after {
+  display: none;
+}
+
+/* ---- Main Content ---- */
+main {
+  background-color: #ffffff;
+  font-size: 1rem;
+  padding: 30px;
+  min-height: calc(100vh - 300px);
+}
+
+.content-block {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #0b3d91;
+  border-bottom: 3px solid #e8eef9;
+  padding-bottom: 10px;
+  margin-top: 0;
+}
+
+h3 {
+  color: #1a5fc9;
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* ---- Image Styling (Box Model) ----
+   All images use: border, padding, border-radius */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Page hero images */
 .page-hero {
-  margin: 0 0 16px;
+  margin: 0 0 24px;
   padding: 0;
 }
 
@@ -81,41 +178,212 @@ nav a[aria-current="page"] {
   width: 100%;
   max-width: 900px;
   height: auto;
-  border-radius: 14px;
-  display: block;
+  /* Box Model Properties */
+  border: 4px solid #0b3d91;
+  padding: 8px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  /* Hover transition setup */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.content-block {
-  max-width: 900px;
+/* Hover effect on hero images */
+.page-hero img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
+.page-hero figcaption {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* ---- Callout Section ---- */
 .callout {
   border-left: 6px solid #0b3d91;
-  background: #f4f7ff;
-  padding: 12px 14px;
-  border-radius: 10px;
-  margin: 14px 0;
+  background: linear-gradient(to right, #f4f7ff, #ffffff);
+  padding: 16px 20px;
+  border-radius: 0 12px 12px 0;
+  margin: 24px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
+.callout h3 {
+  margin-top: 0;
+}
+
+/* ---- Grid Layout ----
+   Applied to parent element with 2 columns */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin: 30px 0;
+}
+
+.grid-item {
+  margin: 0;
+  padding: 0;
+  background-color: #f8fafc;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect on grid items */
+.grid-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  /* Box Model Properties */
+  border: 3px solid #1a5fc9;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.grid-item:hover img {
+  transform: scale(1.05);
+}
+
+.grid-item figcaption {
+  padding: 12px;
+  text-align: center;
+  font-weight: 600;
+  color: #0b3d91;
+}
+
+/* ---- Flex Layout ----
+   Applied to gallery with flex-wrap */
+.flex-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.flex-item {
+  margin: 0;
+  padding: 0;
+  flex: 0 1 calc(33.333% - 20px);
+  min-width: 250px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.flex-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  /* Box Model Properties */
+  border: 3px solid #0b3d91;
+  padding: 4px;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: all 0.4s ease;
+}
+
+.flex-item figcaption {
+  padding: 12px;
+  text-align: center;
+  font-weight: 600;
+  color: #0b3d91;
+  background-color: #f8fafc;
+}
+
+/* ---- nth-child Selector ----
+   Every odd flex-item gets a different border-radius and border color */
+.flex-item:nth-child(odd) img {
+  border-radius: 50% 8px 50% 8px;
+  border-color: #e91e63;
+}
+
+.flex-item:nth-child(even) img {
+  border-radius: 8px 50% 8px 50%;
+  border-color: #4caf50;
+}
+
+/* Additional nth-child styling for backgrounds */
+.flex-item:nth-child(3n) {
+  background-color: #fff8e1;
+}
+
+/* ---- Hover Effects on Flex Items ----
+   Interesting transition with rotate and scale */
+.flex-item:hover {
+  transform: translateY(-10px) rotate(1deg);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+.flex-item:hover img {
+  transform: scale(1.08);
+  filter: brightness(1.1) saturate(1.2);
+}
+
+/* ---- Footer ---- */
+footer {
+  background: linear-gradient(135deg, #0b3d91 0%, #1a5fc9 100%);
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  margin-top: auto;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* ---- Responsive Design ---- */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .flex-item {
+    flex: 0 1 100%;
+  }
+  
+  nav a {
+    padding: 12px 18px;
+    font-size: 0.95rem;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* ---- Lists ---- */
 .list {
   margin: 10px 0 0;
   padding-left: 20px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 40% 40%;
-  justify-content: space-between;
-  align-items: start;
-  row-gap: 20px;
+.list li {
+  margin-bottom: 8px;
 }
 
-.grid img {
-  width: 100%;
+.list a {
+  color: #0b3d91;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-.flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.list a:hover {
+  color: #1a5fc9;
+  text-decoration: underline;
 }

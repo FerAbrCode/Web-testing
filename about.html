@@ -1,15 +1,15 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Project Starter - About</title>
+    <title>Photo Gallery - About</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to Main Content</a>
     <header>
-      <h1>Project Starter</h1>
+      <h1>Photo Gallery</h1>
     </header>
     <nav>
       <ul>
@@ -20,23 +20,47 @@
     </nav>
     <main id="main-content">
       <div class="content-block">
-        <h2>About</h2>
+        <h2>About Our Gallery</h2>
         <figure class="page-hero">
-          <img src="images/about.svg" alt="Abstract banner representing analysis and reasoning" />
+          <img src="https://picsum.photos/id/1018/900/400" alt="Foggy mountain peaks with dramatic clouds" />
+          <figcaption>Misty mountain peaks</figcaption>
         </figure>
         <p>
-          This page explains how to think about breaking news in prediction markets (like Polymarket) and how to turn a headline into a clear, testable market question.
+          This gallery is dedicated to showcasing the beauty of nature and architecture through photography.
+          We believe that every image tells a story and captures a moment in time.
         </p>
-        <section class="callout" aria-labelledby="about-implications">
-          <h3 id="about-implications">Implications for Polymarket (general)</h3>
+
+        <section class="callout" aria-labelledby="about-grid">
+          <h3 id="about-grid">Our Photography Grid</h3>
           <p>
-            Breaking news typically moves markets because it changes the probability of an outcome, not because it is “good” or “bad.” The strongest price moves usually happen when news is both <strong>credible</strong> (verifiable) and <strong>surprising</strong> (meaningfully different from what traders expected).
-          </p>
-          <p>
-            Example (Jan 13, 2026): Ukraine’s parliament dismissed Vasyl Malyuk from the post of Head of the Security Service of Ukraine (SBU). A
+            Below you will find a curated selection of images displayed using CSS Grid layout.
+            Hover over each image to see a smooth zoom effect!
           </p>
         </section>
+
+        <!-- Grid Layout Section -->
+        <div class="grid">
+          <figure class="grid-item">
+            <img src="https://picsum.photos/id/1019/400/300" alt="Cloudy sky with dramatic sunset colors" />
+            <figcaption>Sunset Sky</figcaption>
+          </figure>
+          <figure class="grid-item">
+            <img src="https://picsum.photos/id/1020/400/300" alt="Coastal town with boats in harbor" />
+            <figcaption>Coastal Harbor</figcaption>
+          </figure>
+          <figure class="grid-item">
+            <img src="https://picsum.photos/id/1021/400/300" alt="Snowy mountain landscape with forest" />
+            <figcaption>Winter Wonderland</figcaption>
+          </figure>
+          <figure class="grid-item">
+            <img src="https://picsum.photos/id/1022/400/300" alt="Nature path through autumn forest" />
+            <figcaption>Forest Trail</figcaption>
+          </figure>
+        </div>
       </div>
     </main>
+    <footer>
+      <p>&copy; 2026 Photo Gallery. All rights reserved.</p>
+    </footer>
   </body>
 </html>
