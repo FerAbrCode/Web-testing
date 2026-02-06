@@ -38,22 +38,24 @@
           </p>
         </section>
 
+        <div id="image">Hover over an image below to display here.</div>
+
         <!-- Grid Layout Section -->
         <div class="grid">
           <figure class="grid-item">
-            <img src="https://picsum.photos/id/1019/400/300" alt="Cloudy sky with dramatic sunset colors" />
+            <img src="https://picsum.photos/id/1019/400/300" alt="Cloudy sky with dramatic sunset colors" onmouseover="upDate(this)" onmouseout="undo()" />
             <figcaption>Sunset Sky</figcaption>
           </figure>
           <figure class="grid-item">
-            <img src="https://picsum.photos/id/1020/400/300" alt="Coastal town with boats in harbor" />
+            <img src="https://picsum.photos/id/1020/400/300" alt="Coastal town with boats in harbor" onmouseover="upDate(this)" onmouseout="undo()" />
             <figcaption>Coastal Harbor</figcaption>
           </figure>
           <figure class="grid-item">
-            <img src="https://picsum.photos/id/1021/400/300" alt="Snowy mountain landscape with forest" />
+            <img src="https://picsum.photos/id/1021/400/300" alt="Snowy mountain landscape with forest" onmouseover="upDate(this)" onmouseout="undo()" />
             <figcaption>Winter Wonderland</figcaption>
           </figure>
           <figure class="grid-item">
-            <img src="https://picsum.photos/id/1022/400/300" alt="Nature path through autumn forest" />
+            <img src="https://picsum.photos/id/1022/400/300" alt="Nature path through autumn forest" onmouseover="upDate(this)" onmouseout="undo()" />
             <figcaption>Forest Trail</figcaption>
           </figure>
         </div>
@@ -62,5 +64,6 @@
     <footer>
       <p>&copy; 2026 Photo Gallery. All rights reserved.</p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

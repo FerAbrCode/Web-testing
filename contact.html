@@ -39,31 +39,33 @@
           </p>
         </section>
 
+        <div id="image">Hover over an image below to display here.</div>
+
         <!-- Flex Layout Section with 6 images (5+ required) -->
         <h3>Image Showcase (Flex Layout)</h3>
         <div class="flex-gallery">
           <figure class="flex-item">
-            <img src="https://picsum.photos/id/1024/300/200" alt="Vintage Volkswagen van on desert road" />
+            <img src="https://picsum.photos/id/1024/300/200" alt="Vintage Volkswagen van on desert road" onmouseover="upDate(this)" onmouseout="undo()" />
             <figcaption>Road Trip</figcaption>
           </figure>
           <figure class="flex-item">
-            <img src="https://picsum.photos/id/1025/300/200" alt="Small pug dog looking at camera" />
+            <img src="https://picsum.photos/id/1025/300/200" alt="Small pug dog looking at camera" onmouseover="upDate(this)" onmouseout="undo()" />
             <figcaption>Curious Pug</figcaption>
           </figure>
           <figure class="flex-item">
-            <img src="https://picsum.photos/id/1026/300/200" alt="Person on a pier looking at the water" />
+            <img src="https://picsum.photos/id/1026/300/200" alt="Person on a pier looking at the water" onmouseover="upDate(this)" onmouseout="undo()" />
             <figcaption>Peaceful Pier</figcaption>
           </figure>
           <figure class="flex-item">
-            <img src="https://picsum.photos/id/1027/300/200" alt="Flamingo standing in water" />
+            <img src="https://picsum.photos/id/1027/300/200" alt="Flamingo standing in water" onmouseover="upDate(this)" onmouseout="undo()" />
             <figcaption>Pink Flamingo</figcaption>
           </figure>
           <figure class="flex-item">
-            <img src="https://picsum.photos/id/1028/300/200" alt="Snowy cabin in winter forest" />
+            <img src="https://picsum.photos/id/1028/300/200" alt="Snowy cabin in winter forest" onmouseover="upDate(this)" onmouseout="undo()" />
             <figcaption>Winter Cabin</figcaption>
           </figure>
           <figure class="flex-item">
-            <img src="https://picsum.photos/id/1029/300/200" alt="Close up of green leaves with water droplets" />
+            <img src="https://picsum.photos/id/1029/300/200" alt="Close up of green leaves with water droplets" onmouseover="upDate(this)" onmouseout="undo()" />
             <figcaption>Morning Dew</figcaption>
           </figure>
         </div>
@@ -72,5 +74,6 @@
     <footer>
       <p>&copy; 2026 Photo Gallery. All rights reserved.</p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
