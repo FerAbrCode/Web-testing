@@ -233,7 +233,7 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  color: #ffffff;
+  color: #0b3d91;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
 }
 
@@ -254,6 +254,12 @@ img {
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:focus,
+.flex-item:focus {
+  outline: 3px solid #ffc107;
+  outline-offset: 4px;
 }
 
 /* Hover effect on grid items */

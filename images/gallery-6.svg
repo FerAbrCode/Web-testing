@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400" role="img" aria-label="Abstract garden with leaf shapes">
+  <rect width="600" height="400" fill="#f8fafc"/>
+  <g opacity="0.95">
+    <path d="M120,320 C70,270 75,200 135,155 C190,210 185,280 120,320 Z" fill="#4caf50"/>
+    <path d="M210,310 C165,265 170,205 225,170 C270,220 265,280 210,310 Z" fill="#2e7d32"/>
+    <path d="M320,320 C265,265 270,195 340,150 C395,210 390,280 320,320 Z" fill="#66bb6a"/>
+    <path d="M420,310 C380,265 385,210 440,175 C485,220 480,280 420,310 Z" fill="#43a047"/>
+    <path d="M520,320 C470,270 475,205 535,155 C590,210 585,280 520,320 Z" fill="#1b5e20"/>
+  </g>
+  <circle cx="90" cy="110" r="40" fill="#1a5fc9" opacity="0.2"/>
+  <circle cx="520" cy="90" r="55" fill="#e91e63" opacity="0.15"/>
+</svg>

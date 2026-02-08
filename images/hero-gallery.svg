@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="400" viewBox="0 0 900 400" role="img" aria-label="Accessible interactive gallery hero illustration">
+  <defs>
+    <linearGradient id="heroSky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b3d91"/>
+      <stop offset="1" stop-color="#d6e2fb"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="400" fill="url(#heroSky)"/>
+  <circle cx="740" cy="90" r="55" fill="#ffd54f" opacity="0.95"/>
+  <g opacity="0.9">
+    <rect x="80" y="110" width="220" height="160" rx="18" fill="#ffffff"/>
+    <rect x="105" y="135" width="170" height="20" rx="8" fill="#e8eef9"/>
+    <rect x="105" y="165" width="140" height="18" rx="8" fill="#e8eef9"/>
+    <rect x="105" y="193" width="155" height="18" rx="8" fill="#e8eef9"/>
+    <rect x="105" y="222" width="120" height="18" rx="8" fill="#e8eef9"/>
+  </g>
+  <g opacity="0.95">
+    <rect x="360" y="95" width="480" height="270" rx="22" fill="#08306b"/>
+    <rect x="385" y="120" width="430" height="220" rx="16" fill="#1a5fc9"/>
+    <circle cx="420" cy="155" r="26" fill="#ffc107" opacity="0.9"/>
+    <path d="M385,320 C455,250 520,345 590,285 C650,235 710,315 815,255 L815,340 L385,340 Z" fill="#0b3d91" opacity="0.8"/>
+  </g>
+</svg>
